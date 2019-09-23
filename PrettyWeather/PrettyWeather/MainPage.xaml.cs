@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace PrettyWeather
 {
@@ -27,5 +28,7 @@ namespace PrettyWeather
 				Console.WriteLine(e);
 			}
 		}
+
+		public Grid Background => _background;
     }
 }

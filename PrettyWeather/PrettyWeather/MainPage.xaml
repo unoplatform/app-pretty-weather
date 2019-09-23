@@ -19,8 +19,7 @@
     <pancake:PancakeView BackgroundGradientStartColor="{Binding Temp, Converter={converters:BackgroundColorConverter IsStart=True}}"
                          BackgroundGradientEndColor="{Binding Temp, Converter={converters:BackgroundColorConverter IsStart=False}}">
         <Grid Padding="{OnPlatform Android='0,24,0,0', iOS='0,44,0,0'}"
-              RowSpacing="0"
-			BackgroundColor="Red">
+              RowSpacing="0">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -30,7 +29,14 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label
+
+			<OnPlatform x:TypeArguments="View">
+				<OnPlatform.WinPhone>
+					<Grid Grid.RowSpan="6" x:Name="_background" />
+				</OnPlatform.WinPhone>
+			</OnPlatform>
+
+			<Label
                 HorizontalOptions="Center"
                 Text="SEATTLE" 
                 FontSize="Large"
