@@ -1,7 +1,7 @@
 ﻿<linker>
-  <assembly fullname="app_pretty_weather.Wasm" />
+  <assembly fullname="PrettyWeather.Wasm" />
   <assembly fullname="Uno.UI" />
-  <assembly fullname="app_pretty_weather" />
+  <assembly fullname="PrettyWeather" />
 
   <assembly fullname="System.Core">
 	<!-- This is required by Json.NET and any expression.Compile caller -->

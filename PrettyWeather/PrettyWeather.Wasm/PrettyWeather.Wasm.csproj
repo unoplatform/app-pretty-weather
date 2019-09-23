@@ -24,14 +24,18 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<ProjectReference Include="..\app_pretty_weather\app_pretty_weather.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Compile Include="../app_pretty_weather.UWP/*.xaml.cs">
 			<DependentUpon>%(FileName)</DependentUpon>
 		</Compile>
 		<Page Include="../app_pretty_weather.UWP/*.xaml" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <None Remove="spaceneedle.png" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Content Include="spaceneedle.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -41,6 +45,10 @@
 		<PackageReference Include="Uno.Xamarin.Forms.Platform" Version="4.1.0-uno.104" />
 		<PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.302" />
 		<DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.302" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\PrettyWeather\PrettyWeather.csproj" />
 	</ItemGroup>
 
 	<Import Project="..\PrettyWeather.Shared\PrettyWeather.Shared.projitems" Label="Shared" />

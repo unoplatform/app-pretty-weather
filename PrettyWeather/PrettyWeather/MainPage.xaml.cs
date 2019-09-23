@@ -14,8 +14,18 @@ namespace PrettyWeather
     public partial class MainPage : ContentPage
     {
         public MainPage()
-        {
-            InitializeComponent();
-        }
+		{
+			Console.WriteLine("CREATING PAGE");
+
+			try
+			{
+				InitializeComponent();
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine("CREATING PAGE FAILED");
+				Console.WriteLine(e);
+			}
+		}
     }
 }

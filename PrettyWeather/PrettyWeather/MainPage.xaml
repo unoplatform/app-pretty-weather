@@ -10,7 +10,8 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="WeatherPage"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+	BackgroundColor="Transparent">
     <ContentPage.BindingContext>
         <viewmodel:WeatherViewModel Temp="61"/>
     </ContentPage.BindingContext>
@@ -18,7 +19,8 @@
     <pancake:PancakeView BackgroundGradientStartColor="{Binding Temp, Converter={converters:BackgroundColorConverter IsStart=True}}"
                          BackgroundGradientEndColor="{Binding Temp, Converter={converters:BackgroundColorConverter IsStart=False}}">
         <Grid Padding="{OnPlatform Android='0,24,0,0', iOS='0,44,0,0'}"
-              RowSpacing="0">
+              RowSpacing="0"
+			BackgroundColor="Red">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -69,7 +71,7 @@
                 FontSize="Small"
                 TextColor="{StaticResource MainTextColor}"/>
 
-            <CollectionView Grid.Row="5" Margin="0,20" 
+            <!--<CollectionView Grid.Row="5" Margin="0,20" 
                             HeightRequest="80" 
                             VerticalOptions="End"
                             ItemsLayout="HorizontalList">
@@ -100,7 +102,7 @@
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
+            </CollectionView>-->
         </Grid>
     </pancake:PancakeView>
 </ContentPage>
