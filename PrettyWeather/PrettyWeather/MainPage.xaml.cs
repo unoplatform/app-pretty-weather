@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace PrettyWeather
 {
@@ -14,8 +15,20 @@ namespace PrettyWeather
     public partial class MainPage : ContentPage
     {
         public MainPage()
-        {
-            InitializeComponent();
-        }
+		{
+			Console.WriteLine("CREATING PAGE");
+
+			try
+			{
+				InitializeComponent();
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine("CREATING PAGE FAILED");
+				Console.WriteLine(e);
+			}
+		}
+
+		public Grid Background => _background;
     }
 }
