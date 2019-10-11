@@ -13,7 +13,7 @@ A very pretty weather application built with Xamarin.
 
 ## Misc
 
-Lisences under MIT
+Licenses under MIT
 
 Space Needle icon by [Blair Adams via The Noun Project](https://thenounproject.com/search/?q=space%20needle&i=915578)
 
